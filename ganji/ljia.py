@@ -49,8 +49,11 @@ def getErshouList(url):
 	webhtml=requests.get(url)
 	print(webhtml.text)
 	soup = BeautifulSoup(webhtml.text)
-		#phoneDiv=soup.find_all("span", class_="phoneNum-style")
-	print(soup)
+    print(soup.find_all('a'))
+    
+	#phoneDiv=soup.find_all("ul", class_="boxText")
+    #for d in soup.find_all("ul", class_="boxText"):
+    #    print(d)
 
-getErshouList("http://bj.ganji.com/jiaju/o15/")
+getErshouList("http://www.ljia.net/jingjiren/p-1.html")
 
